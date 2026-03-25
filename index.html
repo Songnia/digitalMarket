@@ -615,7 +615,7 @@
 
 <!-- Header -->
 <header>
-  <button class="back-btn" id="backBtn" style="visibility:hidden" onclick="goBack()">
+  <button class="back-btn" id="backBtn" onclick="goBack()">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
     Retour
   </button>
@@ -987,7 +987,7 @@
       </ul>
 
       <button class="btn-primary btn-gold" style="font-size:18px; padding:20px;" onclick="handlePurchase()">
-        💳 J'accède au pack maintenant
+        💳 Je rejoins la formation  maintenant
       </button>
 
       <div style="display:flex; align-items:center; justify-content:center; gap:16px; margin-top:14px; flex-wrap:wrap;">
@@ -1040,7 +1040,7 @@
     </div>
 
     <button class="btn-primary btn-gold" style="font-size:18px; padding:20px;" onclick="handlePurchase()">
-      💳 J'accède au pack maintenant
+      💳 Je rejoins la formation  maintenant
     </button>
 
     <div class="urgency-note">
@@ -1060,6 +1060,7 @@
   const TOTAL_STEPS = 8;
   let currentStep = 1;
   let history = [];
+  let currentMode = 'screen'; // screen | loading | results | sales
 
   function saveFlowState(state) {
     try {
@@ -1083,7 +1084,6 @@
       currentStep = 1;
       history = [];
       showScreen(1);
-      document.getElementById('backBtn').style.visibility = 'hidden';
       document.getElementById('stepCounter').style.visibility = 'hidden';
       return;
     }
@@ -1102,21 +1102,24 @@
     history = Array.isArray(saved.history) ? saved.history : [];
 
     if (saved.mode === 'screen') {
+      currentMode = 'screen';
       showScreen(currentStep);
     } else if (saved.mode === 'loading') {
+      currentMode = 'loading';
       document.getElementById('screen-loading').classList.add('active');
-      document.getElementById('backBtn').style.visibility = 'hidden';
       document.getElementById('stepCounter').style.visibility = 'hidden';
       document.getElementById('progress-bar').style.width = '90%';
     } else if (saved.mode === 'results') {
+      currentMode = 'results';
       document.getElementById('screen-results').classList.add('active');
       document.getElementById('progress-bar').style.width = '95%';
     } else if (saved.mode === 'sales') {
+      currentMode = 'sales';
       document.getElementById('screen-sales').classList.add('active');
       document.getElementById('progress-bar').style.width = '100%';
     } else {
+      currentMode = 'screen';
       showScreen(1);
-      document.getElementById('backBtn').style.visibility = 'hidden';
       document.getElementById('stepCounter').style.visibility = 'hidden';
     }
   }
@@ -1148,6 +1151,7 @@
   function showScreen(step) {
     const el = document.getElementById('screen-' + step);
     if (!el) return;
+    currentMode = 'screen';
     el.classList.add('active');
     updateHeader(step);
     updateProgress(step);
@@ -1155,6 +1159,28 @@
   }
 
   function goBack() {
+    if (currentMode === 'sales') {
+      document.getElementById('screen-sales').classList.remove('active');
+      document.getElementById('screen-results').classList.add('active');
+      document.getElementById('progress-bar').style.width = '95%';
+      currentMode = 'results';
+      saveFlowState({ mode: 'results', step: currentStep, history });
+      return;
+    }
+    if (currentMode === 'results') {
+      document.getElementById('screen-results').classList.remove('active');
+      currentStep = 8;
+      showScreen(8);
+      saveFlowState({ mode: 'screen', step: currentStep, history });
+      return;
+    }
+    if (currentMode === 'loading') {
+      document.getElementById('screen-loading').classList.remove('active');
+      currentStep = 8;
+      showScreen(8);
+      saveFlowState({ mode: 'screen', step: currentStep, history });
+      return;
+    }
     if (history.length === 0) return;
     const prev = history.pop();
     const from = document.getElementById('screen-' + currentStep);
@@ -1168,7 +1194,7 @@
     const backBtn = document.getElementById('backBtn');
     const counter = document.getElementById('stepCounter');
     const stepNum = document.getElementById('stepNum');
-    backBtn.style.visibility = step > 1 ? 'visible' : 'hidden';
+    backBtn.style.visibility = 'visible';
     counter.style.visibility = 'visible';
     stepNum.textContent = step;
   }
@@ -1190,7 +1216,6 @@
     // Hide current screen
     const screen8 = document.getElementById('screen-8');
     screen8.classList.remove('active');
-    document.getElementById('backBtn').style.visibility = 'hidden';
     document.getElementById('stepCounter').style.visibility = 'hidden';
     document.getElementById('progress-bar').style.width = '90%';
 
@@ -1198,6 +1223,7 @@
     const loader = document.getElementById('screen-loading');
     loader.classList.add('active');
 
+    currentMode = 'loading';
     saveFlowState({ mode: 'loading', step: currentStep, history });
     animateLoader();
   }
@@ -1266,6 +1292,7 @@
     document.getElementById('progress-bar').style.width = '95%';
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
+    currentMode = 'results';
     saveFlowState({ mode: 'results', step: currentStep, history });
 
     // Animate scores
@@ -1298,6 +1325,7 @@
     sales.classList.add('active');
     document.getElementById('progress-bar').style.width = '100%';
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    currentMode = 'sales';
     saveFlowState({ mode: 'sales', step: currentStep, history });
     startCountdown();
   }
