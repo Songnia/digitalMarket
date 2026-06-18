@@ -3,1352 +3,531 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TikTok Ads System – Vends Sans Montrer Ton Visage</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>Travailler au Luxembourg en 2026 — Guide Gratuit</title>
+<meta name="description" content="Guide gratuit + accompagnement pour trouver un emploi légal au Luxembourg depuis l'Afrique en 2026.">
+<meta property="og:title" content="Travailler au Luxembourg en 2026 — Guide Gratuit">
+<meta property="og:description" content="Découvrez les métiers qui recrutent au Luxembourg et comment partir en toute légalité.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%87%B1%F0%9F%87%BA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;900&family=Roboto+Mono:wght@500;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #0a0a0f;
-    --card: #12121a;
-    --border: #1e1e2e;
-    --accent: #fe2c55;
-    --accent2: #25f4ee;
-    --gold: #ffd60a;
-    --text: #f0f0f5;
-    --muted: #8888aa;
-    --success: #00e096;
-    --white: #ffffff;
-    --radius: 14px;
-    --font-head: 'Syne', sans-serif;
-    --font-body: 'DM Sans', sans-serif;
+  :root{
+    --lux-blue:#1955DE;
+    --lux-blue-deep:#0A1F44;
+    --lux-blue-soft:#E8EEFC;
+    --lux-red:#D7263D;
+    --lux-red-deep:#A91729;
+    --lux-red-soft:#FBE7E9;
+    --whatsapp:#1FAA59;
+    --whatsapp-deep:#16873F;
+    --surface:#FFFFFF;
+    --mist:#F4F6FB;
+    --ink:#13202E;
+    --ink-soft:#56627A;
+    --ink-faint:#8995AC;
+    --glass-fill: rgba(255,255,255,0.58);
+    --glass-fill-strong: rgba(255,255,255,0.82);
+    --glass-border: rgba(255,255,255,0.7);
+    --shadow-soft: 0 10px 34px rgba(15,40,95,0.10);
+    --shadow-lift: 0 20px 50px rgba(15,40,95,0.16);
+    --radius-lg:28px;
+    --radius-md:18px;
+    --radius-sm:14px;
   }
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Roboto',system-ui,-apple-system,sans-serif;
+    background:var(--mist);
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  .material-symbols-outlined{
+    font-variation-settings:'OPSZ' 24,'wght' 400,'FILL' 0,'GRAD' 0;
+    line-height:1;
+    vertical-align:middle;
+  }
+  img,svg{display:block;}
+  a{color:inherit;text-decoration:none;}
+  ul{margin:0;padding:0;list-style:none;}
+  button{font-family:inherit;cursor:pointer;}
 
-  html, body {
-    height: 100%;
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--font-body);
-    overflow-x: hidden;
-  }
+  /* ---------- ambient background ---------- */
+  .bg-aura{position:fixed;inset:0;overflow:hidden;z-index:-1;pointer-events:none;}
+  .bg-aura span{position:absolute;border-radius:50%;filter:blur(95px);opacity:.5;}
+  .bg-aura .b1{width:560px;height:560px;background:radial-gradient(circle,#4F7CFB,transparent 70%);top:-180px;left:-140px;animation:driftA 24s ease-in-out infinite alternate;}
+  .bg-aura .b2{width:480px;height:480px;background:radial-gradient(circle,#FF6B7A,transparent 70%);top:26%;right:-180px;animation:driftB 28s ease-in-out infinite alternate;}
+  .bg-aura .b3{width:620px;height:620px;background:radial-gradient(circle,#7FB2FF,transparent 70%);bottom:-240px;left:6%;animation:driftC 32s ease-in-out infinite alternate;}
+  .bg-aura .b4{width:380px;height:380px;background:radial-gradient(circle,#FFB1B8,transparent 70%);bottom:8%;right:4%;animation:driftA 26s ease-in-out infinite alternate;}
+  @keyframes driftA{to{transform:translate(36px,28px) scale(1.08);}}
+  @keyframes driftB{to{transform:translate(-28px,36px) scale(1.05);}}
+  @keyframes driftC{to{transform:translate(22px,-26px) scale(1.1);}}
 
-  /* ─── NOISE TEXTURE ─── */
-  body::before {
-    content: '';
-    position: fixed; inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
-    pointer-events: none; z-index: 0; opacity: .4;
+  /* ---------- layout helpers ---------- */
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px;}
+  .section{padding:88px 0;}
+  .section-tight{padding:56px 0;}
+  .center{text-align:center;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    background:rgba(25,85,222,0.08);color:var(--lux-blue);
+    padding:7px 16px;border-radius:999px;
+    font-family:'Roboto Mono',monospace;font-weight:700;
+    font-size:12px;letter-spacing:1.6px;text-transform:uppercase;
   }
+  .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--lux-red);}
+  h1,h2,h3{margin:0;font-weight:900;letter-spacing:-0.01em;color:var(--ink);}
+  h2{font-size:clamp(1.7rem,3.2vw,2.3rem);}
+  p{line-height:1.65;color:var(--ink-soft);margin:0;}
+  .section-head{max-width:680px;margin:0 auto 44px;}
+  .section-head p{margin-top:12px;}
 
-  /* ─── BACKGROUND GLOW ─── */
-  .bg-glow {
-    position: fixed; pointer-events: none; z-index: 0;
-    border-radius: 50%; filter: blur(120px); opacity: 0.12;
+  /* ---------- buttons ---------- */
+  .btn{
+    position:relative;overflow:hidden;
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    border:none;border-radius:999px;
+    padding:16px 30px;font-size:16px;font-weight:600;
+    transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+    white-space:nowrap;
   }
-  .bg-glow-1 { width: 500px; height: 500px; background: var(--accent); top: -100px; right: -100px; }
-  .bg-glow-2 { width: 400px; height: 400px; background: var(--accent2); bottom: -80px; left: -80px; }
+  .btn:focus-visible{outline:3px solid var(--lux-blue);outline-offset:2px;}
+  .btn-red{background:linear-gradient(135deg,var(--lux-red),var(--lux-red-deep));color:#fff;box-shadow:0 10px 26px rgba(215,38,61,0.32);}
+  .btn-red:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(215,38,61,0.4);}
+  .btn-whatsapp{background:linear-gradient(135deg,var(--whatsapp),var(--whatsapp-deep));color:#fff;box-shadow:0 10px 26px rgba(31,170,89,0.32);width:100%;}
+  .btn-whatsapp:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(31,170,89,0.4);}
+  .btn-ghost{background:var(--glass-fill);border:1px solid var(--glass-border);color:var(--ink);backdrop-filter:blur(12px);}
+  .btn-block{width:100%;}
+  .ripple{position:absolute;border-radius:50%;background:rgba(255,255,255,0.55);transform:scale(0);animation:rippleAnim .6s ease-out;pointer-events:none;}
+  @keyframes rippleAnim{to{transform:scale(2.6);opacity:0;}}
 
-  /* ─── PROGRESS BAR ─── */
-  #progress-bar-wrap {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    height: 4px; background: rgba(255,255,255,0.07);
-  }
-  #progress-bar {
-    height: 100%;
-    background: linear-gradient(90deg, var(--accent), var(--accent2));
-    transition: width 0.5s cubic-bezier(.4,0,.2,1);
-    box-shadow: 0 0 12px var(--accent);
-    width: 0%;
-  }
-
-  /* ─── HEADER ─── */
-  header {
-    position: fixed; top: 4px; left: 0; right: 0; z-index: 99;
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 14px 24px;
-    background: rgba(10,10,15,0.85);
-    backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-  }
-  .logo {
-    font-family: var(--font-head);
-    font-weight: 800; font-size: 18px;
-    background: linear-gradient(135deg, var(--accent), var(--accent2));
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    letter-spacing: -0.5px;
-  }
-  .logo span { color: var(--gold); -webkit-text-fill-color: var(--gold); }
-  .step-counter {
-    font-family: var(--font-head);
-    font-size: 13px; color: var(--muted);
-    font-weight: 600; letter-spacing: 1px;
-  }
-  .step-counter b { color: var(--text); font-size: 15px; }
-  .back-btn {
-    background: none; border: none; color: var(--muted);
-    font-family: var(--font-body); font-size: 13px; cursor: pointer;
-    display: flex; align-items: center; gap: 5px;
-    transition: color .2s;
-  }
-  .back-btn:hover { color: var(--text); }
-  .back-btn svg { width: 14px; height: 14px; }
-
-  /* ─── MAIN CONTAINER ─── */
-  #app {
-    min-height: 100vh;
-    display: flex; align-items: center; justify-content: center;
-    padding: 100px 20px 40px;
-    position: relative; z-index: 1;
-  }
-
-  /* ─── SCREENS ─── */
-  .screen {
-    display: none;
-    width: 100%; max-width: 560px;
-    animation: fadeUp .45s cubic-bezier(.4,0,.2,1) forwards;
-  }
-  .screen.active { display: block; }
-
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(28px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes fadeOut {
-    from { opacity: 1; transform: translateY(0); }
-    to   { opacity: 0; transform: translateY(-20px); }
+  /* ---------- glass card base ---------- */
+  .glass{
+    background:var(--glass-fill);
+    border:1px solid var(--glass-border);
+    backdrop-filter:blur(18px) saturate(150%);
+    -webkit-backdrop-filter:blur(18px) saturate(150%);
+    box-shadow:var(--shadow-soft);
   }
 
-  /* ─── CARD ─── */
-  .card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 24px;
-    padding: 40px 36px;
-    position: relative; overflow: hidden;
-  }
-  .card::before {
-    content: '';
-    position: absolute; top: 0; left: 0; right: 0; height: 2px;
-    background: linear-gradient(90deg, var(--accent), var(--accent2));
-  }
+  /* ---------- header ---------- */
+  .site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.72);backdrop-filter:blur(16px) saturate(160%);-webkit-backdrop-filter:blur(16px) saturate(160%);border-bottom:1px solid rgba(15,40,95,0.07);}
+  .header-inner{max-width:1120px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;}
+  .logo{display:flex;align-items:center;gap:8px;font-weight:800;font-size:1.05rem;}
+  .logo .flag{font-size:1.35rem;}
+  .header-cta{padding:10px 20px;font-size:14px;}
 
-  /* ─── TYPOGRAPHY ─── */
-  .tag {
-    display: inline-block;
-    font-size: 11px; font-weight: 600; letter-spacing: 1.5px;
-    text-transform: uppercase;
-    padding: 4px 12px; border-radius: 20px;
-    background: rgba(254,44,85,0.15);
-    color: var(--accent); border: 1px solid rgba(254,44,85,0.3);
-    margin-bottom: 18px;
-  }
-  .tag.teal { background: rgba(37,244,238,0.12); color: var(--accent2); border-color: rgba(37,244,238,0.25); }
-  .tag.gold { background: rgba(255,214,10,0.12); color: var(--gold); border-color: rgba(255,214,10,0.25); }
+  /* ---------- hero ---------- */
+  .hero{position:relative;padding:72px 0 40px;}
+  .hero-inner{max-width:680px;}
+  .hero h1{font-size:clamp(2.3rem,5vw,3.5rem);line-height:1.06;margin-top:18px;}
+  .hero h1 .accent{color:var(--lux-red);}
+  .hero p.lead{margin-top:18px;font-size:1.08rem;max-width:560px;}
+  .hero-ctas{margin-top:30px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;}
+  .hero-ctas .micro{font-size:13px;color:var(--ink-faint);display:flex;align-items:center;gap:6px;}
+  .hero-ctas .micro .material-symbols-outlined{font-size:18px;color:var(--lux-blue);}
 
-  h1 {
-    font-family: var(--font-head);
-    font-size: clamp(26px, 5vw, 34px);
-    font-weight: 800; line-height: 1.15;
-    letter-spacing: -1px; margin-bottom: 14px;
-    color: var(--white);
-  }
-  h1 em { font-style: normal; color: var(--accent); }
-  h1 .hl { color: var(--accent2); }
-  h1 .gold { color: var(--gold); }
+  .stamp{position:absolute;top:-6px;right:18px;width:106px;height:106px;border-radius:50%;background:var(--glass-fill-strong);border:2px solid var(--lux-red);display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(-11deg);box-shadow:var(--shadow-soft);backdrop-filter:blur(10px);}
+  .stamp::before{content:"";position:absolute;inset:7px;border:1px dashed rgba(215,38,61,.55);border-radius:50%;}
+  .stamp .s-top,.stamp .s-bot{font-family:'Roboto Mono',monospace;font-size:8.5px;letter-spacing:1.4px;color:var(--lux-red);font-weight:700;}
+  .stamp .s-mid{font-size:23px;font-weight:900;color:var(--lux-red);line-height:1;margin:1px 0;}
 
-  h2 {
-    font-family: var(--font-head);
-    font-size: clamp(20px, 4vw, 26px);
-    font-weight: 700; line-height: 1.2;
-    letter-spacing: -0.5px; margin-bottom: 12px;
-    color: var(--white);
-  }
-  h2 em { font-style: normal; color: var(--accent2); }
+  .stat-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px;}
+  .stat-chip{display:flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;}
+  .stat-chip .material-symbols-outlined{font-size:22px;color:var(--lux-blue);}
+  .stat-chip.red .material-symbols-outlined{color:var(--lux-red);}
+  .stat-chip span.txt{font-size:14px;font-weight:600;color:var(--ink);}
 
-  p {
-    font-size: 15px; line-height: 1.7;
-    color: var(--muted); margin-bottom: 12px;
-  }
-  p strong { color: var(--text); font-weight: 600; }
-  p .accent { color: var(--accent); font-weight: 600; }
-  p .teal { color: var(--accent2); font-weight: 600; }
+  /* ---------- trust strip ---------- */
+  .trust-strip{padding:28px 0;}
+  .trust-strip .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:28px;}
+  .trust-item{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--ink-soft);font-weight:500;}
+  .trust-item .material-symbols-outlined{font-size:19px;color:var(--lux-blue);}
 
-  /* ─── HERO SCREEN (page 1) ─── */
-  .hero-icon {
-    width: 70px; height: 70px; border-radius: 20px;
-    background: linear-gradient(135deg, var(--accent), #ff6b6b);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 34px; margin-bottom: 24px;
-    box-shadow: 0 12px 40px rgba(254,44,85,0.4);
-  }
-  .hero-stats {
-    display: flex; gap: 12px; margin: 20px 0;
-    flex-wrap: wrap;
-  }
-  .stat-chip {
-    display: flex; align-items: center; gap: 8px;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 10px; padding: 10px 14px;
-    font-size: 13px; color: var(--text); flex: 1; min-width: 130px;
-  }
-  .stat-chip .dot { width: 8px; height: 8px; border-radius: 50%; }
-  .stat-chip .dot.red { background: var(--accent); box-shadow: 0 0 8px var(--accent); }
-  .stat-chip .dot.teal { background: var(--accent2); box-shadow: 0 0 8px var(--accent2); }
-  .stat-chip .dot.gold { background: var(--gold); box-shadow: 0 0 8px var(--gold); }
+  /* ---------- jobs ---------- */
+  .jobs-panel{border-radius:var(--radius-lg);padding:36px;}
+  .job-grid{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;}
+  .job-chip{display:flex;align-items:center;gap:10px;background:var(--surface);border:1px solid rgba(15,40,95,0.08);padding:9px 16px 9px 9px;border-radius:999px;box-shadow:0 4px 14px rgba(15,40,95,0.06);}
+  .job-chip .ic{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--lux-blue-soft);color:var(--lux-blue);flex-shrink:0;}
+  .job-chip:nth-child(odd) .ic{background:var(--lux-red-soft);color:var(--lux-red);}
+  .job-chip .ic .material-symbols-outlined{font-size:19px;}
+  .job-chip span.label{font-size:14px;font-weight:600;color:var(--ink);}
 
-  /* ─── BUTTONS ─── */
-  .btn-primary {
-    display: block; width: 100%;
-    padding: 17px 24px;
-    background: linear-gradient(135deg, var(--accent) 0%, #ff5074 100%);
-    color: #fff; font-family: var(--font-head);
-    font-size: 16px; font-weight: 700; letter-spacing: 0.3px;
-    border: none; border-radius: var(--radius); cursor: pointer;
-    text-align: center; transition: all .25s;
-    box-shadow: 0 8px 32px rgba(254,44,85,0.4);
-    position: relative; overflow: hidden;
-  }
-  .btn-primary::after {
-    content: '';
-    position: absolute; inset: 0;
-    background: linear-gradient(135deg, rgba(255,255,255,0.15), transparent);
-    opacity: 0; transition: opacity .2s;
-  }
-  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(254,44,85,0.5); }
-  .btn-primary:hover::after { opacity: 1; }
-  .btn-primary:active { transform: translateY(0); }
+  /* ---------- checklist ---------- */
+  .check-grid{display:grid;grid-template-columns:1fr;gap:14px;max-width:780px;margin:0 auto;}
+  .check-row{display:flex;align-items:flex-start;gap:16px;padding:20px 22px;border-radius:var(--radius-md);}
+  .check-row .ic{width:30px;height:30px;border-radius:50%;background:var(--lux-red);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
+  .check-row .ic .material-symbols-outlined{font-size:18px;}
+  .check-row p.title{color:var(--ink);font-weight:600;font-size:15.5px;line-height:1.5;margin:0;}
 
-  .btn-secondary {
-    display: block; width: 100%;
-    padding: 16px 24px;
-    background: transparent;
-    color: var(--text); font-family: var(--font-head);
-    font-size: 15px; font-weight: 600;
-    border: 1.5px solid rgba(255,255,255,0.15); border-radius: var(--radius); cursor: pointer;
-    text-align: center; transition: all .25s;
-    margin-top: 10px;
-  }
-  .btn-secondary:hover { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.3); }
+  /* ---------- steps ---------- */
+  .steps{display:flex;justify-content:center;gap:0;max-width:840px;margin:0 auto;}
+  .step{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;padding:0 12px;}
+  .step .num{width:46px;height:46px;border-radius:50%;background:var(--lux-blue);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px;box-shadow:0 8px 20px rgba(25,85,222,0.3);position:relative;z-index:2;}
+  .step:nth-child(2) .num{background:var(--lux-red);box-shadow:0 8px 20px rgba(215,38,61,0.3);}
+  .step:nth-child(3) .num{background:var(--whatsapp);box-shadow:0 8px 20px rgba(31,170,89,0.3);}
+  .step p.s-label{margin-top:14px;font-weight:600;color:var(--ink);font-size:14.5px;max-width:160px;}
+  .step:not(:last-child)::after{content:"";position:absolute;top:23px;left:60%;width:80%;height:2px;background:repeating-linear-gradient(90deg,rgba(15,40,95,0.18) 0 8px,transparent 8px 16px);z-index:1;}
 
-  .btn-teal {
-    background: linear-gradient(135deg, var(--accent2) 0%, #0ff4c8 100%);
-    color: #0a0a0f;
-    box-shadow: 0 8px 32px rgba(37,244,238,0.35);
+  /* ---------- form ---------- */
+  .form-wrap{max-width:560px;margin:0 auto;}
+  .ticket-card{position:relative;border-radius:var(--radius-lg);padding:44px 36px 36px;}
+  .ticket-card::before{content:"";position:absolute;top:0;left:28px;right:28px;height:0;border-top:3px dashed rgba(215,38,61,0.5);}
+  .ticket-card::after{content:"";position:absolute;top:-11px;left:50%;transform:translateX(-50%);width:22px;height:22px;border-radius:50%;background:var(--mist);box-shadow: -240px 0 0 var(--mist), 240px 0 0 var(--mist);}
+  .field{position:relative;margin-bottom:24px;}
+  .field label{display:block;font-size:12.5px;font-weight:700;letter-spacing:.4px;color:var(--ink-soft);margin-bottom:7px;}
+  .field input{
+    width:100%;padding:15px 16px;border:1.5px solid rgba(15,40,95,0.16);border-radius:var(--radius-sm);
+    background:rgba(255,255,255,0.7);font-size:15.5px;color:var(--ink);outline:none;font-family:inherit;
+    transition:border-color .18s, box-shadow .18s, background .18s;
   }
-  .btn-teal:hover { box-shadow: 0 12px 40px rgba(37,244,238,0.5); }
+  .field input::placeholder{color:var(--ink-faint);}
+  .field input:focus{border-color:var(--lux-blue);box-shadow:0 0 0 4px rgba(25,85,222,0.13);background:#fff;}
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .form-note{display:flex;align-items:flex-start;gap:8px;margin-top:6px;font-size:13px;color:var(--ink-soft);}
+  .form-note .material-symbols-outlined{font-size:17px;color:var(--lux-blue);margin-top:1px;}
 
-  .btn-gold {
-    background: linear-gradient(135deg, var(--gold) 0%, #ffb700 100%);
-    color: #0a0a0f;
-    box-shadow: 0 8px 32px rgba(255,214,10,0.4);
-    font-size: 17px; padding: 19px 24px;
-  }
-  .btn-gold:hover { box-shadow: 0 12px 40px rgba(255,214,10,0.55); }
+  .success-view{display:none;text-align:center;}
+  .success-view .big-check{width:72px;height:72px;border-radius:50%;background:var(--lux-red-soft);color:var(--lux-red);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;}
+  .success-view .big-check .material-symbols-outlined{font-size:38px;}
+  .success-view h3{font-size:1.4rem;}
+  .success-view p{margin-top:10px;}
+  .success-view .btn{margin-top:22px;}
 
-  /* ─── CHOICE BUTTONS ─── */
-  .choices { display: flex; flex-direction: column; gap: 10px; margin-top: 24px; }
-  .choice-btn {
-    display: flex; align-items: center; gap: 14px;
-    padding: 16px 18px;
-    background: rgba(255,255,255,0.03);
-    border: 1.5px solid rgba(255,255,255,0.1);
-    border-radius: var(--radius); cursor: pointer;
-    transition: all .2s; text-align: left;
-    font-family: var(--font-body); color: var(--text);
-    font-size: 15px; font-weight: 500;
-  }
-  .choice-btn:hover {
-    background: rgba(254,44,85,0.08);
-    border-color: rgba(254,44,85,0.4);
-    transform: translateX(4px);
-  }
-  .choice-btn.yes:hover { background: rgba(0,224,150,0.08); border-color: rgba(0,224,150,0.4); }
-  .choice-icon {
-    width: 40px; height: 40px; border-radius: 10px;
-    background: rgba(255,255,255,0.05);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 20px; flex-shrink: 0;
-  }
+  /* ---------- footer ---------- */
+  .site-footer{padding:40px 0 56px;border-top:1px solid rgba(15,40,95,0.08);}
+  .site-footer .wrap{text-align:center;}
+  .site-footer p{font-size:12.5px;color:var(--ink-faint);line-height:1.7;max-width:560px;margin:0 auto;}
+  .site-footer .f-logo{font-weight:800;color:var(--ink-soft);margin-bottom:10px;font-size:14px;}
 
-  /* ─── INFO BLOCKS ─── */
-  .info-block {
-    background: rgba(37,244,238,0.06);
-    border: 1px solid rgba(37,244,238,0.15);
-    border-radius: var(--radius); padding: 16px 18px;
-    margin: 16px 0;
-    display: flex; gap: 12px; align-items: flex-start;
+  /* ---------- responsive ---------- */
+  @media (max-width:880px){
+    .section{padding:64px 0;}
+    .steps{flex-direction:column;gap:28px;}
+    .step:not(:last-child)::after{display:none;}
+    .check-grid{grid-template-columns:1fr;}
   }
-  .info-block .info-icon { font-size: 22px; flex-shrink: 0; margin-top: 1px; }
-  .info-block p { margin: 0; color: var(--text); font-size: 14px; }
-
-  .warning-block {
-    background: rgba(255,214,10,0.07);
-    border: 1px solid rgba(255,214,10,0.2);
-    border-radius: var(--radius); padding: 14px 16px;
-    display: flex; gap: 10px; align-items: center;
-    margin: 16px 0; font-size: 13px; color: var(--gold);
+  @media (max-width:680px){
+    .jobs-panel{padding:24px 18px;}
+    .field-row{grid-template-columns:1fr;gap:0;}
+    .ticket-card{padding:40px 22px 30px;}
+    .stamp{width:78px;height:78px;top:-2px;right:6px;}
+    .stamp .s-mid{font-size:17px;}
+    .stamp .s-top,.stamp .s-bot{font-size:6.5px;}
+    .hero{padding:48px 0 28px;}
   }
-
-  /* ─── FEATURE LIST ─── */
-  .feature-list { list-style: none; margin: 18px 0; display: flex; flex-direction: column; gap: 12px; }
-  .feature-list li {
-    display: flex; align-items: flex-start; gap: 12px;
-    font-size: 14.5px; color: var(--text); line-height: 1.5;
-  }
-  .feature-list li .icon {
-    width: 28px; height: 28px; border-radius: 8px; flex-shrink: 0;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 14px;
-  }
-  .feature-list li .icon.red { background: rgba(254,44,85,0.15); }
-  .feature-list li .icon.teal { background: rgba(37,244,238,0.12); }
-  .feature-list li .icon.gold { background: rgba(255,214,10,0.12); }
-
-  /* ─── EMAIL SCREEN ─── */
-  .email-input {
-    width: 100%; padding: 16px 18px;
-    background: rgba(255,255,255,0.05);
-    border: 1.5px solid rgba(255,255,255,0.12);
-    border-radius: var(--radius); color: var(--text);
-    font-family: var(--font-body); font-size: 15px;
-    outline: none; transition: border-color .2s;
-    margin-bottom: 12px;
-  }
-  .email-input:focus { border-color: var(--accent2); background: rgba(37,244,238,0.04); }
-  .email-input::placeholder { color: var(--muted); }
-
-  .privacy-note {
-    display: flex; align-items: center; gap: 8px;
-    font-size: 12px; color: var(--muted); margin-top: 8px;
-  }
-  .privacy-note svg { width: 14px; height: 14px; color: var(--success); flex-shrink: 0; }
-
-  /* ─── LOADING SCREEN ─── */
-  #screen-loading {
-    display: none; width: 100%; max-width: 400px;
-    text-align: center;
-    animation: fadeUp .4s ease forwards;
-  }
-  #screen-loading.active { display: block; }
-
-  .loading-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 24px; padding: 40px 32px;
-    position: relative; overflow: hidden;
-  }
-  .loading-card::before {
-    content: '';
-    position: absolute; top: 0; left: 0; right: 0; height: 2px;
-    background: linear-gradient(90deg, var(--accent), var(--accent2));
-  }
-
-  .circular-loader {
-    position: relative; width: 120px; height: 120px;
-    margin: 0 auto 24px;
-  }
-  .circular-loader svg { transform: rotate(-90deg); }
-  .circular-loader .track { fill: none; stroke: rgba(255,255,255,0.07); stroke-width: 8; }
-  .circular-loader .progress-ring {
-    fill: none; stroke-width: 8;
-    stroke: url(#loaderGrad);
-    stroke-linecap: round;
-    stroke-dasharray: 314;
-    stroke-dashoffset: 314;
-    transition: stroke-dashoffset 0.6s ease;
-    filter: drop-shadow(0 0 8px var(--accent));
-  }
-  .circular-loader .pct {
-    position: absolute; inset: 0;
-    display: flex; align-items: center; justify-content: center;
-    font-family: var(--font-head); font-size: 28px; font-weight: 800;
-    color: var(--white);
-  }
-
-  .check-items { list-style: none; margin: 20px 0 0; display: flex; flex-direction: column; gap: 10px; text-align: left; }
-  .check-items li {
-    display: flex; align-items: center; gap: 12px;
-    font-size: 14px; color: var(--muted); transition: color .3s;
-  }
-  .check-items li.done { color: var(--text); }
-  .check-box {
-    width: 22px; height: 22px; border-radius: 6px;
-    border: 2px solid rgba(255,255,255,0.15);
-    flex-shrink: 0; display: flex; align-items: center; justify-content: center;
-    transition: all .3s;
-  }
-  .check-items li.done .check-box {
-    background: var(--success); border-color: var(--success);
-  }
-
-  /* ─── RESULTS SCREEN ─── */
-  #screen-results {
-    display: none; width: 100%; max-width: 600px;
-    animation: fadeUp .4s ease forwards;
-  }
-  #screen-results.active { display: block; }
-
-  .results-header {
-    text-align: center; margin-bottom: 24px;
-  }
-  .results-header .tag { margin-bottom: 10px; }
-
-  .score-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 20px;
-  }
-  .score-card {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 18px; padding: 20px 18px; position: relative;
-    overflow: hidden;
-  }
-  .score-card::after {
-    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-  }
-  .score-card.red::after { background: var(--accent); }
-  .score-card.teal::after { background: var(--accent2); }
-
-  .score-label { font-size: 12px; color: var(--muted); margin-bottom: 8px; font-weight: 500; text-transform: uppercase; letter-spacing: .8px; }
-  .score-value {
-    font-family: var(--font-head); font-size: 36px; font-weight: 800;
-    line-height: 1; margin-bottom: 6px;
-  }
-  .score-value.red { color: var(--accent); }
-  .score-value.teal { color: var(--accent2); }
-
-  .score-bar-wrap { height: 6px; background: rgba(255,255,255,0.07); border-radius: 3px; overflow: hidden; }
-  .score-bar { height: 100%; border-radius: 3px; transition: width 1s ease; width: 0; }
-  .score-bar.red { background: var(--accent); box-shadow: 0 0 10px var(--accent); }
-  .score-bar.teal { background: var(--accent2); box-shadow: 0 0 10px var(--accent2); }
-
-  .insight-box {
-    background: rgba(37,244,238,0.06); border: 1px solid rgba(37,244,238,0.2);
-    border-radius: var(--radius); padding: 16px 18px;
-    margin-bottom: 14px;
-    font-size: 14px; color: var(--text); line-height: 1.6;
-  }
-
-  /* ─── SALES PAGE ─── */
-  #screen-sales {
-    display: none; width: 100%; max-width: 600px;
-    animation: fadeUp .4s ease forwards;
-  }
-  #screen-sales.active { display: block; }
-
-  .countdown-banner {
-    background: linear-gradient(135deg, rgba(254,44,85,0.2), rgba(254,44,85,0.08));
-    border: 1px solid rgba(254,44,85,0.3);
-    border-radius: 12px; padding: 12px 18px;
-    display: flex; align-items: center; justify-content: space-between;
-    margin-bottom: 20px; flex-wrap: wrap; gap: 8px;
-  }
-  .countdown-text { font-size: 13px; color: var(--muted); }
-  .countdown-time {
-    font-family: var(--font-head); font-size: 20px; font-weight: 800;
-    color: var(--accent); letter-spacing: 2px;
-    text-shadow: 0 0 20px rgba(254,44,85,0.5);
-  }
-
-  .program-card {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 20px; padding: 24px; margin-bottom: 20px;
-    position: relative; overflow: hidden;
-  }
-  .program-card::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-    background: linear-gradient(90deg, var(--accent2), var(--accent));
-  }
-  .program-title { font-family: var(--font-head); font-size: 13px; font-weight: 700; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
-  .program-steps { display: flex; flex-direction: column; gap: 0; }
-  .program-step {
-    display: flex; align-items: flex-start; gap: 14px;
-    padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.05);
-  }
-  .program-step:last-child { border-bottom: none; }
-  .step-num {
-    width: 28px; height: 28px; border-radius: 8px; flex-shrink: 0;
-    background: rgba(254,44,85,0.15); border: 1px solid rgba(254,44,85,0.3);
-    display: flex; align-items: center; justify-content: center;
-    font-family: var(--font-head); font-size: 12px; font-weight: 800; color: var(--accent);
-  }
-  .step-text { font-size: 14px; color: var(--text); line-height: 1.5; }
-  .step-text small { color: var(--muted); font-size: 12px; display: block; }
-
-  .price-section {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 20px; padding: 28px 24px; margin-bottom: 20px;
-    text-align: center; position: relative; overflow: hidden;
-  }
-  .price-badge {
-    position: absolute; top: -1px; right: 24px;
-    background: var(--accent); color: #fff;
-    font-family: var(--font-head); font-size: 12px; font-weight: 700;
-    padding: 4px 14px; border-radius: 0 0 10px 10px;
-    letter-spacing: .5px;
-  }
-  .old-price {
-    font-size: 18px; color: var(--muted); text-decoration: line-through;
-    margin-bottom: 6px; display: block;
-  }
-  .new-price {
-    font-family: var(--font-head); font-size: 54px; font-weight: 800;
-    color: var(--gold); line-height: 1;
-    text-shadow: 0 0 40px rgba(255,214,10,0.3);
-  }
-  .new-price span { font-size: 22px; color: var(--muted); font-weight: 500; }
-  .price-desc { font-size: 13px; color: var(--muted); margin: 10px 0 20px; }
-
-  .includes-list { list-style: none; margin: 0 0 20px; display: flex; flex-direction: column; gap: 10px; text-align: left; }
-  .includes-list li {
-    display: flex; align-items: center; gap: 10px;
-    font-size: 14px; color: var(--text);
-  }
-  .includes-list li .ck {
-    width: 20px; height: 20px; border-radius: 6px;
-    background: rgba(0,224,150,0.15); border: 1px solid rgba(0,224,150,0.3);
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0; font-size: 11px;
-  }
-
-  .guarantee-box {
-    display: flex; align-items: center; gap: 14px;
-    background: rgba(0,224,150,0.07); border: 1px solid rgba(0,224,150,0.2);
-    border-radius: var(--radius); padding: 16px;
-    margin-bottom: 20px;
-  }
-  .guarantee-icon { font-size: 36px; flex-shrink: 0; }
-  .guarantee-text h4 { font-family: var(--font-head); font-size: 14px; font-weight: 700; color: var(--success); margin-bottom: 4px; }
-  .guarantee-text p { font-size: 13px; color: var(--muted); margin: 0; line-height: 1.5; }
-
-  .testimonials { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
-  .testimonial {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: var(--radius); padding: 16px 18px;
-  }
-  .testimonial-header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
-  .avatar {
-    width: 38px; height: 38px; border-radius: 50%; flex-shrink: 0;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 16px; font-weight: 700; color: #fff;
-    font-family: var(--font-head);
-  }
-  .avatar.a1 { background: linear-gradient(135deg, #fe2c55, #ff8c42); }
-  .avatar.a2 { background: linear-gradient(135deg, #25f4ee, #0ff4c8); color: #0a0a0f; }
-  .avatar.a3 { background: linear-gradient(135deg, #ffd60a, #ff8c42); color: #0a0a0f; }
-  .testimonial-name { font-size: 14px; font-weight: 600; color: var(--text); }
-  .stars { color: var(--gold); font-size: 12px; letter-spacing: 1px; }
-  .testimonial p { font-size: 13.5px; color: var(--muted); margin: 0; line-height: 1.6; font-style: italic; }
-
-  .media-logos {
-    display: flex; align-items: center; justify-content: center;
-    gap: 20px; flex-wrap: wrap; padding: 20px 0;
-    border-top: 1px solid var(--border); margin-bottom: 24px;
-  }
-  .media-logo {
-    font-family: var(--font-head); font-size: 13px; font-weight: 700;
-    color: rgba(255,255,255,0.2); letter-spacing: 1px; text-transform: uppercase;
-  }
-
-  .urgency-note {
-    text-align: center; font-size: 13px; color: var(--muted);
-    margin-top: 14px; display: flex; align-items: center; justify-content: center; gap: 6px;
-  }
-  .urgency-note .dot-pulse {
-    width: 8px; height: 8px; border-radius: 50%;
-    background: var(--accent);
-    animation: pulse 1.2s infinite;
-    display: inline-block;
-  }
-  @keyframes pulse {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(254,44,85,0.6); }
-    50% { box-shadow: 0 0 0 6px rgba(254,44,85,0); }
-  }
-
-  .divider { height: 1px; background: var(--border); margin: 20px 0; }
-
-  /* ─── SECTION IMAGES ─── */
-  .section-media {
-    margin: 18px auto 10px;
-    text-align: center;
-  }
-  .section-media img {
-    width: 100%;
-    max-width: 320px;
-    border-radius: 16px;
-    display: block;
-    margin: 0 auto;
-    box-shadow: 0 14px 40px rgba(0,0,0,0.35);
-  }
-  .section-media .media-caption {
-    font-size: 13px;
-    color: var(--muted);
-    margin-top: 10px;
-  }
-
-  /* ─── RESPONSIVE ─── */
-  @media (max-width: 540px) {
-    .card { padding: 28px 20px; }
-    .score-grid { grid-template-columns: 1fr; }
-    header { padding: 12px 16px; }
-    h1 { font-size: 24px; }
+  @media (prefers-reduced-motion: reduce){
+    .bg-aura span{animation:none !important;}
+    *{scroll-behavior:auto !important;}
   }
 </style>
 </head>
 <body>
 
-<!-- Background glows -->
-<div class="bg-glow bg-glow-1"></div>
-<div class="bg-glow bg-glow-2"></div>
+<div class="bg-aura" aria-hidden="true"><span class="b1"></span><span class="b2"></span><span class="b3"></span><span class="b4"></span></div>
 
-<!-- SVG Gradient for loader -->
-<svg width="0" height="0" style="position:absolute">
-  <defs>
-    <linearGradient id="loaderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#fe2c55"/>
-      <stop offset="100%" style="stop-color:#25f4ee"/>
-    </linearGradient>
-  </defs>
-</svg>
-
-<!-- Progress bar -->
-<div id="progress-bar-wrap"><div id="progress-bar"></div></div>
-
-<!-- Header -->
-<header>
-  <button class="back-btn" id="backBtn" onclick="goBack()">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
-    Retour
-  </button>
-  <div class="logo">Tik<span>Ads</span>Pro</div>
-  <div class="step-counter" id="stepCounter" style="visibility:hidden"><b id="stepNum">1</b> / 8</div>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo"><span class="flag">🇱🇺</span> LuxEmploi</div>
+    <a href="#inscription" class="btn btn-red header-cta">Recevoir le guide</a>
+  </div>
 </header>
 
-<div id="app">
+<main>
 
-  <!-- ══════════════════════════════════════════
-       SCREEN 1 — HOOK
-  ══════════════════════════════════════════ -->
-  <div class="screen active" id="screen-1">
-    <div class="card">
-      <!--<div class="hero-icon">📱</div>-->
-      
-      <div class="tag">Méthode 2025</div>
-      <h1>Génère des ventes avec TikTok Ads… <em>sans montrer ton visage.</em></h1>
-      <p>Découvre comment créer un vrai <strong>système qui vend</strong>, même avec un simple téléphone et un petit budget.</p>
-      <figure class="section-media">
-        <img src="page%201.png" alt="Aperçu des résultats de ventes">
-        <figcaption class="media-caption">Un aperçu des résultats possibles après mise en place du système.</figcaption>
-      </figure>
-      <div class="hero-stats">
-        <div class="stat-chip"><span class="dot red"></span>Zéro visage nécessaire</div>
-        <div class="stat-chip"><span class="dot teal"></span>Petit budget OK</div>
-        <div class="stat-chip"><span class="dot gold"></span>100% sur téléphone</div>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-inner" style="position:relative;">
+        <div class="eyebrow"><span class="dot"></span> Dossier Luxembourg · 2026</div>
+        <h1>Travailler légalement au <span class="accent">Luxembourg</span>, dès 2026.</h1>
+        <p class="lead">Le Luxembourg manque de bras dans plus de 15 secteurs. Ce guide gratuit vous montre comment repérer une offre fiable, construire un dossier solide et partir en règle, sans intermédiaire douteux.</p>
+        <div class="hero-ctas">
+          <a href="#inscription" class="btn btn-red">
+            <span class="material-symbols-outlined" aria-hidden="true">description</span>
+            Recevoir mon guide gratuit
+          </a>
+          <span class="micro"><span class="material-symbols-outlined">schedule</span> Inscription en 2 minutes</span>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat-chip glass"><span class="material-symbols-outlined" aria-hidden="true">work_history</span><span class="txt">15+ secteurs en pénurie</span></div>
+          <div class="stat-chip glass red"><span class="material-symbols-outlined" aria-hidden="true">groups</span><span class="txt">Recrutement chaque année</span></div>
+          <div class="stat-chip glass"><span class="material-symbols-outlined" aria-hidden="true">verified</span><span class="txt">100% gratuit</span></div>
+        </div>
       </div>
 
-      <div class="info-block">
-        <div class="info-icon">🎯</div>
-        <p>Réponds à <strong>8 questions rapides</strong> et découvre comment lancer ton système de vente TikTok dès aujourd'hui.</p>
-      </div>
-
-      
-
-      <button class="btn-primary" onclick="goTo(2)">Je prends le contrôle maintenant →</button>
-    </div>
-  </div>
-
-  <!-- ══════════════════════════════════════════
-       SCREEN 2 — DOULEUR
-  ══════════════════════════════════════════ -->
-  <div class="screen" id="screen-2">
-    <div class="card">
-      <div class="tag">Le vrai problème</div>
-      <h2>Tu perds de l'argent dans des publicités… <em>qui ne vendent pas ?</em></h2>
-      <p><strong>Ce n'est pas toi le problème.</strong><br>C'est la méthode que tu utilises.</p>
-      <p>Aujourd'hui, la plupart des gens échouent avec <span class="accent">Facebook Ads</span>… parce que c'est devenu trop cher et saturé.</p>
-
-      <div class="info-block">
-        <div class="info-icon">💡</div>
-        <p>On va te montrer une <strong>alternative plus simple et plus rentable</strong> avec TikTok.</p>
-      </div>
-
-      <ul class="feature-list">
-        <li>
-          <div class="icon red">❌</div>
-          <div>Facebook Ads : coût par clic en hausse, reach en baisse</div>
-        </li>
-        <li>
-          <div class="icon teal">✅</div>
-          <div>TikTok Ads : algorithme encore favorable aux nouveaux comptes</div>
-        </li>
-        <li>
-          <div class="icon gold">🚀</div>
-          <div>Un seul créateur peut toucher des millions sans budget massif</div>
-        </li>
-      </ul>
-
-      
-
-      <button class="btn-primary btn-teal" onclick="goTo(3)">Continuer →</button>
-    </div>
-  </div>
-
-  <!-- ══════════════════════════════════════════
-       SCREEN 3 — BUDGET
-  ══════════════════════════════════════════ -->
-  <div class="screen" id="screen-3">
-    <div class="card">
-      <div class="tag">Question 1/3</div>
-      <h2>Tu veux vendre en ligne… mais tu n'as pas un <em>gros budget</em> ?</h2>
-      <p style="font-size:13px; font-style:italic; color:var(--muted);">Sois honnête. C'est ce qui bloque la plupart des gens.</p>
-
-      
-
-      <div class="choices">
-        <button class="choice-btn yes" onclick="goTo(4)">
-          <div class="choice-icon">😅</div>
-          <span>Oui, exactement — mon budget est limité</span>
-        </button>
-        <button class="choice-btn" onclick="goTo(4)">
-          <div class="choice-icon">💰</div>
-          <span>Non, j'ai du budget à investir</span>
-        </button>
+      <div class="stamp" aria-hidden="true">
+        <span class="s-top">PARCOURS</span>
+        <span class="s-mid">100%</span>
+        <span class="s-bot">LÉGAL</span>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- ══════════════════════════════════════════
-       SCREEN 4 — TÉLÉPHONE
-  ══════════════════════════════════════════ -->
-  <div class="screen" id="screen-4">
-    <div class="card">
-      <div class="tag teal">Bonne nouvelle</div>
-      <h2>Tu n'as pas d'ordinateur ?</h2>
-      <p><strong>Aucun problème.</strong></p>
-      <p>Tout se fait directement avec ton <span class="teal">téléphone</span>. Tu peux lancer tes publicités, créer ton contenu et gérer ton business… <strong>depuis ta main.</strong></p>
-
-      <!--<div style="text-align:center; font-size:72px; margin: 20px 0; filter: drop-shadow(0 0 20px rgba(37,244,238,0.4));">📱</div>-->
-
-      
-
-      <ul class="feature-list">
-        <li><div class="icon teal"></div><div>Lancer des pubs TikTok depuis l'app</div></li>
-        <li><div class="icon teal"></div><div>Créer des vidéos directement sur le téléphone</div></li>
-        <li><div class="icon teal"></div><div>Gérer ton business n'importe où, n'importe quand</div></li>
-      </ul>
-
-      <button class="btn-primary btn-teal" onclick="goTo(5)">Continuer →</button>
+  <!-- TRUST STRIP -->
+  <section class="trust-strip">
+    <div class="wrap">
+      <div class="trust-item"><span class="material-symbols-outlined" aria-hidden="true">lock</span> Aucune donnée bancaire demandée</div>
+      <div class="trust-item"><span class="material-symbols-outlined" aria-hidden="true">badge</span> Programme indépendant d'accompagnement</div>
+      <div class="trust-item"><span class="material-symbols-outlined" aria-hidden="true">public</span> Pensé pour les candidats africains</div>
     </div>
-  </div>
+  </section>
 
-  <!-- ══════════════════════════════════════════
-       SCREEN 5 — CRÉDIBILITÉ
-  ══════════════════════════════════════════ -->
-  <div class="screen" id="screen-5">
-    <div class="card">
-      <div class="tag">Question 2/3</div>
-      <h2>Ton compte TikTok n'est <em>pas crédible</em> ?</h2>
-      <p><span class="accent">Peu d'abonnés = peu de confiance = peu de ventes.</span></p>
-      <p>On te montre comment augmenter toi-même ton nombre d'abonnés pour devenir crédible rapidement et <strong>attirer plus de clients.</strong></p>
-
-      <div class="info-block">
-        <div class="info-icon">📈</div>
-        <p>Nos membres passent en moyenne de <strong>0 à 10k abonnés en une journee </strong> avec les techniques incluses dans la formation.</p>
+  <!-- JOBS -->
+  <section class="section section-tight" id="metiers">
+    <div class="wrap">
+      <div class="section-head center">
+        <div class="eyebrow" style="margin:0 auto 14px;display:table;"><span class="dot"></span> Marché du travail</div>
+        <h2>Les métiers qui recrutent au Luxembourg</h2>
+        <p>Si vous exercez l'un de ces métiers, vos chances d'obtenir une réponse augmentent nettement.</p>
       </div>
 
-      
-
-      <button class="btn-primary" onclick="goTo(6)">Continuer →</button>
-    </div>
-  </div>
-
-  <!-- ══════════════════════════════════════════
-       SCREEN 6 — AVATAR IA
-  ══════════════════════════════════════════ -->
-  <div class="screen" id="screen-6">
-    <div class="card">
-      <div class="tag gold">🤖 Technologie IA</div>
-      <h2>Tu veux vendre… <em>sans montrer ton visage ?</em></h2>
-      <p><strong>Bonne nouvelle.</strong></p>
-      <p>Tu vas apprendre à créer du contenu qui vend grâce à un <span class="teal">avatar IA</span>.</p>
-
-      <ul class="feature-list">
-        <li><div class="icon red">🚫</div><div><strong>Pas besoin de te filmer.</strong> L'IA crée les vidéos à ta place.</div></li>
-        <li><div class="icon red">🚫</div><div><strong>Pas besoin de t'exposer.</strong> Garde ton anonymat total.</div></li>
-        <li><div class="icon gold">✨</div><div>Un avatar personnalisé parle pour toi, 24h/24.</div></li>
-        <li><div class="icon teal">🎯</div><div>Contenu professionnel sans compétences techniques.</div></li>
-      </ul>
-
-      
-
-      <div class="warning-block">
-        ⚡ <span>Cette technique est utilisée par les créateurs les plus discrets qui font le plus de ventes.</span>
-      </div>
-
-      <button class="btn-primary" onclick="goTo(7)">Continuer →</button>
-    </div>
-  </div>
-
-  <!-- ══════════════════════════════════════════
-       SCREEN 7 — ACCOMPAGNEMENT
-  ══════════════════════════════════════════ -->
-  <div class="screen" id="screen-7">
-    <div class="card">
-      <div class="tag teal">Question 3/3</div>
-      <h2>Tu veux etre  <em>accompagné</em> ?</h2>
-      <p><strong>Tu n'es pas livré à toi-même.</strong></p>
-      <p>Tu accèdes à un <span class="teal">groupe privé d'accompagnement</span> où tu peux poser tes questions et avancer étape par étape.</p>
-
-      <div class="info-block">
-        <div class="info-icon">🤝</div>
-        <p>Des centaines de membres actifs qui partagent leurs résultats et s'entraident chaque jour.</p>
-      </div>
-
-    
-
-      
-
-      <ul class="feature-list">
-        <li><div class="icon teal">💬</div><div>Accès au groupe privé WhatsApp/Telegram</div></li>
-        <li><div class="icon teal">🎓</div><div>Coaching en live régulier avec l'équipe</div></li>
-        <li><div class="icon gold">🏆</div><div>Suivi de tes premiers résultats</div></li>
-      </ul>
-
-      <button class="btn-primary btn-teal" onclick="goTo(8)">Continuer →</button>
-    </div>
-  </div>
-
-  <!--══════════════════════════════════════════
-       SCREEN 8 — CAPTURE EMAIL
-  ══════════════════════════════════════════ -->
-  <div class="screen" id="screen-8">
-    <div class="card">
-      <div class="tag gold">🎉 Ton système est prêt !</div>
-      <h2>Accède à ton programme <em>personnalisé</em></h2>
-      <p>Saisis tes informations pour accéder à ton plan d'action et démarrer immédiatement.</p>
-
-      <input type="email" class="email-input" id="emailInput" placeholder="ton@gmail.com" style="margin-bottom:16px;"/>
-      <input type="text" class="email-input" id="nameInput" placeholder="Ton prénom" style="margin-bottom:16px;" />
-
-      <div class="privacy-note">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--success)">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-        </svg>
-        Tes données sont sécurisées. Aucun spam, aucun partage.
-      </div>
-
-      <div style="margin-top:20px;">
-        <button class="btn-primary btn-gold" onclick="startLoading()">Accéder à mon programme →</button>
+      <div class="jobs-panel glass">
+        <div class="job-grid">
+          <div class="job-chip"><span class="ic"><span class="material-symbols-outlined" aria-hidden="true">health_and_safety</span></span><span class="label">Aides-soignants</span></div>
+          <div class="job-chip"><span class="ic"><span class="material-symbols-outlined" aria-hidden="true">vaccines</span></span><span class="label">Infirmiers / infirmières</span></div>
+          <div class="job-chip"><span class="ic"><span class="material-symbols-outlined" aria-hidden="true">cleaning_services</span></span><span class="label">Agents d'entretien</span></div>
+          <div class="job-chip"><span class="ic"><span class="material-symbols-outlined" aria-hidden="true">construction</span></span><span class="label">Bâtiment & travaux publics</span></div>
+          <div class="job-chip"><span class="ic"><span class="material-symbols-outlined" aria-hidden="true">electrical_services</span></span><span class="label">Électriciens</span></div>
+          <div class="job-chip"><span class="ic"><span class="material-symbols-outlined" aria-hidden="true">plumbing</span></span><span class="label">Plombiers</span></div>
+          <div class="job-chip"><span class="ic"><span class="material-symbols-outlined" aria-hidden="true">precision_manufacturing</span></span><span class="label">Soudeurs</span></div>
+          <div class="job-chip"><span class="ic"><span class="material-symbols-outlined" aria-hidden="true">local_shipping</span></span><span class="label">Chauffeurs & livreurs</span></div>
+          <div class="job-chip"><span class="ic"><span class="material-symbols-outlined" aria-hidden="true">inventory_2</span></span><span class="label">Magasiniers</span></div>
+          <div class="job-chip"><span class="ic"><span class="material-symbols-outlined" aria-hidden="true">restaurant</span></span><span class="label">Cuisine & restauration</span></div>
+          <div class="job-chip"><span class="ic"><span class="material-symbols-outlined" aria-hidden="true">handyman</span></span><span class="label">Techniciens de maintenance</span></div>
+          <div class="job-chip"><span class="ic"><span class="material-symbols-outlined" aria-hidden="true">code</span></span><span class="label">Informatique & développement</span></div>
+          <div class="job-chip"><span class="ic"><span class="material-symbols-outlined" aria-hidden="true">work</span></span><span class="label">Assistants administratifs</span></div>
+          <div class="job-chip"><span class="ic"><span class="material-symbols-outlined" aria-hidden="true">security</span></span><span class="label">Agents de sécurité</span></div>
+          <div class="job-chip"><span class="ic"><span class="material-symbols-outlined" aria-hidden="true">factory</span></span><span class="label">Logistique & industrie</span></div>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- ══════════════════════════════════════════
-       LOADING
-  ══════════════════════════════════════════ -->
-  <div id="screen-loading">
-    <div class="loading-card">
-      <h2 style="text-align:center; margin-bottom:6px; font-size:20px;">Nous analysons ton profil…</h2>
-      <p style="text-align:center; font-size:13px; margin-bottom:24px;">Création de ton plan d'action personnalisé</p>
-
-      <div class="circular-loader">
-        <svg viewBox="0 0 120 120" width="120" height="120">
-          <circle class="track" cx="60" cy="60" r="50"/>
-          <circle class="progress-ring" cx="60" cy="60" r="50" id="loaderRing"/>
-        </svg>
-        <div class="pct" id="loaderPct">0%</div>
+  <!-- WHAT'S INSIDE -->
+  <section class="section section-tight">
+    <div class="wrap">
+      <div class="section-head center">
+        <div class="eyebrow" style="margin:0 auto 14px;display:table;"><span class="dot"></span> Contenu du guide</div>
+        <h2>Ce que vous allez découvrir</h2>
+        <p>Six réponses concrètes pour ne plus avancer à l'aveugle.</p>
       </div>
 
-      <ul class="check-items" id="checkItems">
-        <li id="check1"><div class="check-box" id="box1"></div> Analyse de ton profil…</li>
-        <li id="check2"><div class="check-box" id="box2"></div> Identification des blocages…</li>
-        <li id="check3"><div class="check-box" id="box3"></div> Calcul de ton potentiel…</li>
-        <li id="check4"><div class="check-box" id="box4"></div> Création du plan d'action…</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- ══════════════════════════════════════════
-       RESULTS
-  ══════════════════════════════════════════ -->
-  <div id="screen-results">
-    <div class="results-header">
-      <div class="tag gold">📊 Ton diagnostic est prêt</div>
-      <h1 style="text-align:center; font-size:26px;">QU'EST-CE QUI BLOQUE<br>TES VENTES TikTok ?</h1>
-    </div>
-
-    <div class="score-grid">
-      <div class="score-card red">
-        <div class="score-label">Visibilité actuelle</div>
-        <div class="score-value red" id="score1">0</div>
-        <div style="font-size:12px; color:var(--muted); margin-bottom:8px;">/100</div>
-        <div class="score-bar-wrap"><div class="score-bar red" id="bar1" style="width:0"></div></div>
-      </div>
-      <div class="score-card teal">
-        <div class="score-label">Potentiel de vente</div>
-        <div class="score-value teal" id="score2">0</div>
-        <div style="font-size:12px; color:var(--muted); margin-bottom:8px;">/100</div>
-        <div class="score-bar-wrap"><div class="score-bar teal" id="bar2" style="width:0"></div></div>
+      <div class="check-grid">
+        <div class="check-row glass"><span class="ic"><span class="material-symbols-outlined" aria-hidden="true">check</span></span><p class="title">Les métiers qui recrutent réellement au Luxembourg</p></div>
+        <div class="check-row glass"><span class="ic"><span class="material-symbols-outlined" aria-hidden="true">check</span></span><p class="title">Comment repérer des offres d'emploi fiables depuis l'Afrique</p></div>
+        <div class="check-row glass"><span class="ic"><span class="material-symbols-outlined" aria-hidden="true">check</span></span><p class="title">Comment construire un CV qui parle aux recruteurs luxembourgeois</p></div>
+        <div class="check-row glass"><span class="ic"><span class="material-symbols-outlined" aria-hidden="true">check</span></span><p class="title">Les démarches pour obtenir un contrat de travail légalement</p></div>
+        <div class="check-row glass"><span class="ic"><span class="material-symbols-outlined" aria-hidden="true">check</span></span><p class="title">Le parcours complet pour immigrer et travailler en toute conformité</p></div>
+        <div class="check-row glass"><span class="ic"><span class="material-symbols-outlined" aria-hidden="true">check</span></span><p class="title">Les erreurs qui font perdre leur dossier aux candidats étrangers</p></div>
       </div>
     </div>
+  </section>
 
-    <div class="insight-box">
-      🎯 <strong>Tes réponses montrent que</strong> tu as un fort potentiel de vente avec TikTok. Le seul frein ? La <strong>méthode</strong>. Avec le bon système, tu peux commencer à générer tes premières ventes <strong>cette semaine.</strong>
-    </div>
-
-    <div class="card" style="margin-bottom:20px;">
-      <h2 style="font-size:18px; margin-bottom:16px;">📈 Projection de tes résultats</h2>
-      <div style="background:rgba(255,255,255,0.03); border-radius:12px; padding:20px; margin-bottom:16px; text-align:center;">
-        <div style="font-family:var(--font-head); font-size:36px; font-weight:800; color:var(--accent2);">10 MIN</div>
-        <div style="font-size:13px; color:var(--muted); margin-top:4px;">de travail/jour pour lancer ta première pub TikTok</div>
+  <!-- STEPS -->
+  <section class="section-tight">
+    <div class="wrap">
+      <div class="steps">
+        <div class="step"><div class="num">1</div><p class="s-label">Remplissez le formulaire</p></div>
+        <div class="step"><div class="num">2</div><p class="s-label">Rejoignez le groupe WhatsApp</p></div>
+        <div class="step"><div class="num">3</div><p class="s-label">Recevez votre guide gratuit</p></div>
       </div>
-      <p style="font-size:14px; margin:0;">🏆 <strong>89% des membres</strong> font état de leurs premières ventes dans les 21 jours suivant le démarrage du programme.</p>
     </div>
+  </section>
 
-    <button class="btn-primary btn-gold" style="font-size:17px; padding:19px;" onclick="showSales()">
-      Voir mon programme personnalisé →
-    </button>
-  </div>
-
-  <!-- ══════════════════════════════════════════
-       SALES PAGE
-  ══════════════════════════════════════════ -->
-  <div id="screen-sales">
-
-    <div class="countdown-banner">
-      <div>
-        <div style="font-size:12px; color:var(--accent); font-weight:700; text-transform:uppercase; letter-spacing:.8px;">⚠️ Offre limitée</div>
-        <div class="countdown-text">Le prix peut augmenter à tout moment</div>
+  <!-- FORM -->
+  <section class="section" id="inscription">
+    <div class="wrap">
+      <div class="section-head center">
+        <div class="eyebrow" style="margin:0 auto 14px;display:table;"><span class="dot"></span> Inscription · 2 minutes</div>
+        <h2>Réservez votre accès au guide</h2>
+        <p>Remplissez le formulaire, puis rejoignez le groupe pour recevoir votre guide immédiatement.</p>
       </div>
-      <div class="countdown-time" id="countdown">00:15:00</div>
-    </div>
 
-    <div style="text-align:center; margin-bottom:24px;">
-      <h1 style="font-size:clamp(22px,5vw,32px); margin-bottom:10px;">
-        Commence à vendre avec <span class="hl">TikTok</span><br>dès <span class="gold">aujourd'hui.</span>
-      </h1>
-      <p>Accède à un système complet et concret. Pas de théorie inutile.</p>
-    </div>
-    
+      <div class="form-wrap">
+        <div class="ticket-card glass">
 
-    <div class="program-card">
-      <div class="program-title">🗓️ Ton programme semaine par semaine</div>
-      <div class="program-steps">
-        <div class="program-step">
-          <div class="step-num">1</div>
-          <div class="step-text">
-            <strong></strong> — Lancer des publicités rentables
-            <small>Configurer ton compte TikTok Ads, ta première campagne</small>
+          <div id="form-view">
+            <form id="lead-form" novalidate>
+              <div class="field-row">
+                <div class="field">
+                  <label for="nom">Nom</label>
+                  <input type="text" id="nom" name="nom" placeholder="Wilfried" required>
+                </div>
+                <div class="field">
+                  <label for="prenom">Prénom</label>
+                  <input type="text" id="prenom" name="prenom" placeholder="Songnia" required>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="email">Adresse e-mail</label>
+                <input type="email" id="email" name="email" placeholder="vous@exemple.com" required>
+              </div>
+
+              <div class="field">
+                <label for="metier">Métier / domaine d'activité</label>
+                <input type="text" id="metier" name="metier" list="metier-list" placeholder="Ex. : Infirmier, Électricien, Développeur..." required>
+                <datalist id="metier-list">
+                  <option value="Aide-soignant">
+                  <option value="Infirmier / infirmière">
+                  <option value="Agent d'entretien">
+                  <option value="Ouvrier du bâtiment">
+                  <option value="Électricien">
+                  <option value="Plombier">
+                  <option value="Soudeur">
+                  <option value="Chauffeur poids lourd">
+                  <option value="Magasinier">
+                  <option value="Cuisinier">
+                  <option value="Technicien de maintenance">
+                  <option value="Informaticien / développeur">
+                  <option value="Assistant administratif">
+                  <option value="Agent de sécurité">
+                  <option value="Employé logistique">
+                </datalist>
+              </div>
+
+              <div class="field">
+                <label for="pays">Pays de résidence</label>
+                <input type="text" id="pays" name="pays" list="pays-list" placeholder="Ex. : Cameroun" required>
+                <datalist id="pays-list">
+                  <option value="Cameroun">
+                  <option value="Côte d'Ivoire">
+                  <option value="Sénégal">
+                  <option value="Mali">
+                  <option value="Bénin">
+                  <option value="Togo">
+                  <option value="Burkina Faso">
+                  <option value="Niger">
+                  <option value="Guinée">
+                  <option value="République Démocratique du Congo">
+                  <option value="Congo-Brazzaville">
+                  <option value="Gabon">
+                  <option value="Tchad">
+                  <option value="Madagascar">
+                  <option value="Rwanda">
+                  <option value="Burundi">
+                  <option value="Maroc">
+                  <option value="Algérie">
+                  <option value="Tunisie">
+                </datalist>
+              </div>
+
+              <button type="submit" class="btn btn-red btn-block">
+                <span class="material-symbols-outlined" aria-hidden="true">send</span>
+                Recevoir mon guide gratuit
+              </button>
+
+              <div class="form-note">
+                <span class="material-symbols-outlined" aria-hidden="true">lock</span>
+                Inscription gratuite. Aucune carte bancaire ni frais d'agence demandé.
+              </div>
+            </form>
           </div>
-        </div>
-        <div class="program-step">
-          <div class="step-num">2</div>
-          <div class="step-text">
-            <strong></strong> — Créer du contenu sans montrer ton visage
-            <small>Maîtriser l'avatar IA et la création automatisée</small>
+
+          <div id="success-view" class="success-view">
+            <div class="big-check"><span class="material-symbols-outlined" aria-hidden="true">task_alt</span></div>
+            <h3 id="success-title">Dossier enregistré</h3>
+            <p>Dernière étape : rejoignez le groupe WhatsApp pour recevoir votre guide gratuit immédiatement.</p>
+            <a id="whatsapp-btn" class="btn btn-whatsapp" href="#" target="_blank" rel="noopener">
+              <span class="material-symbols-outlined" aria-hidden="true">groups</span>
+              Rejoindre le groupe WhatsApp
+            </a>
           </div>
-        </div>
-        <div class="program-step">
-          <div class="step-num">3</div>
-          <div class="step-text">
-            <strong></strong> — Développer ton audience et ta crédibilité
-            <small>Stratégie croissance abonnés et preuves sociales</small>
-          </div>
-        </div>
-        <div class="program-step">
-          <div class="step-num">4</div>
-          <div class="step-text">
-            <strong></strong> — Scaler et automatiser
-            <small>Multiplier les ventes sans multiplier le travail</small>
-          </div>
-        </div>
-        <div class="program-step">
-          <div class="step-num" style="background:rgba(255,214,10,0.15);border-color:rgba(255,214,10,0.3);color:var(--gold);">+</div>
-          <div class="step-text">
-            <strong>Bonus</strong> — Accès groupe privé + coaching live
-            <small>Accompagnement continu avec la communauté</small>
-          </div>
+
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="price-section">
-      <div class="price-badge">-86% aujourd'hui</div>
-      <span class="old-price">35 500 FCFA</span>
-      <div class="new-price">4 900 <span>FCFA</span></div>
-      <div class="price-desc">Paiement unique · Accès immédiat · À vie</div>
+</main>
 
-      <ul class="includes-list">
-        <li><div class="ck">✓</div>Formation complète TikTok Ads (vidéos HD)</li>
-        <li><div class="ck">✓</div>Méthode avatar IA – sans montrer ton visage</li>
-        <li><div class="ck">✓</div>Stratégie croissance abonnés rapide</li>
-        <li><div class="ck">✓</div>Groupe privé d'accompagnement</li>
-        <li><div class="ck">✓</div>Mises à jour à vie incluses</li>
-        <li><div class="ck">✓</div>Support client 24h/24 – 7j/7</li>
-      </ul>
-
-      <button class="btn-primary btn-gold" style="font-size:18px; padding:20px;" onclick="handlePurchase()">
-        💳 Je rejoins la formation  maintenant
-      </button>
-
-      <div style="display:flex; align-items:center; justify-content:center; gap:16px; margin-top:14px; flex-wrap:wrap;">
-        <span style="font-size:12px; color:var(--muted);">🔒 Paiement sécurisé</span>
-        <span style="font-size:12px; color:var(--muted);">📱 Accès immédiat</span>
-        <span style="font-size:12px; color:var(--muted);">↩️ Annulable</span>
-      </div>
-    </div>
-
-    <div class="guarantee-box">
-      <div class="guarantee-icon">🛡️</div>
-      <div class="guarantee-text">
-        <h4>Garantie 100% Remboursé – 30 jours</h4>
-        <p>Si tu ne vois aucune amélioration dans les 30 jours, on te rembourse intégralement. Sans question.</p>
-      </div>
-    </div>
-
-    <div class="testimonials">
-      <div class="testimonial">
-        <div class="testimonial-header">
-          <div class="avatar a1">K</div>
-          <div><div class="testimonial-name">Kofi M.</div><div class="stars">★★★★★</div></div>
-        </div>
-        <p>« J'ai lancé ma première pub TikTok en moins de 24h. Première vente le lendemain matin. Ce système est vraiment différent. »</p>
-      </div>
-      <div class="testimonial">
-        <div class="testimonial-header">
-          <div class="avatar a2">A</div>
-          <div><div class="testimonial-name">Amina T.</div><div class="stars">★★★★★</div></div>
-        </div>
-        <p>« Le plus incroyable ? Je n'ai jamais montré mon visage. L'avatar IA fait tout le travail. Mes ventes ont triplé en 3 semaines. »</p>
-      </div>
-      <div class="testimonial">
-        <div class="testimonial-header">
-          <div class="avatar a3">S</div>
-          <div><div class="testimonial-name">Seun A.</div><div class="stars">★★★★★</div></div>
-        </div>
-        <p>« J'avais peur de dépenser de l'argent. Avec 5000 FCFA de budget pub, j'ai généré 47 000 FCFA en 2 semaines. Le ROI est réel. »</p>
-      </div>
-    </div>
-
-    <div class="media-logos">
-      <div class="media-logo">Forbes Africa</div>
-      <div class="media-logo">•</div>
-      <div class="media-logo">Business Insider</div>
-      <div class="media-logo">•</div>
-      <div class="media-logo">TechCabal</div>
-      <div class="media-logo">•</div>
-      <div class="media-logo">Jeune Afrique</div>
-    </div>
-
-    <button class="btn-primary btn-gold" style="font-size:18px; padding:20px;" onclick="handlePurchase()">
-      💳 Je rejoins la formation  maintenant
-    </button>
-
-    <div class="urgency-note">
-      <span class="dot-pulse"></span>
-      ⚠️ Offre limitée – le prix peut augmenter à tout moment
-    </div>
-
-    <div style="text-align:center; margin-top:10px;">
-      <span style="font-size:12px; color:rgba(255,255,255,0.15);">Annuler à tout moment · Pas de frais cachés</span>
-    </div>
-
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="f-logo">🇱🇺 LuxEmploi</div>
+    <p>LuxEmploi est un programme indépendant d'accompagnement à l'emploi. Il n'est affilié à aucune administration luxembourgeoise. Le guide et l'accès au groupe sont entièrement gratuits.<br>© 2026 — Tous droits réservés.</p>
   </div>
-
-</div><!-- /app -->
+</footer>
 
 <script>
-  const TOTAL_STEPS = 8;
-  let currentStep = 1;
-  let history = [];
-  let currentMode = 'screen'; // screen | loading | results | sales
+  // 🔧 Lien du groupe WhatsApp — modifiez ici si besoin.
+  const WHATSAPP_GROUP_URL = "https://chat.whatsapp.com/BLa3Kfm419L4PdIQEJLHUJ?s=cl&p=i&ilr=1";
 
-  function saveFlowState(state) {
-    try {
-      localStorage.setItem('tiktokFlowState', JSON.stringify(state));
-    } catch (e) {
-      // Ignore storage errors (private mode, quota, etc.)
-    }
-  }
+  document.getElementById('whatsapp-btn').href = WHATSAPP_GROUP_URL;
 
-  function restoreFlowState() {
-    let saved = null;
-    try {
-      const raw = localStorage.getItem('tiktokFlowState');
-      if (raw) saved = JSON.parse(raw);
-    } catch (e) {
-      saved = null;
-    }
+  // Ripple effect on every button
+  document.querySelectorAll('.btn').forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      const circle = document.createElement('span');
+      circle.className = 'ripple';
+      const rect = this.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height);
+      circle.style.width = circle.style.height = size + 'px';
+      circle.style.left = (e.clientX - rect.left - size/2) + 'px';
+      circle.style.top = (e.clientY - rect.top - size/2) + 'px';
+      this.appendChild(circle);
+      setTimeout(function(){ circle.remove(); }, 600);
+    });
+  });
 
-    // Default to first screen if nothing saved
-    if (!saved || !saved.mode) {
-      currentStep = 1;
-      history = [];
-      showScreen(1);
-      document.getElementById('stepCounter').style.visibility = 'hidden';
+  // Form submit
+  const form = document.getElementById('lead-form');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!form.checkValidity()){
+      form.reportValidity();
       return;
     }
 
-    // Hide all screens
-    const screens = document.querySelectorAll('.screen');
-    screens.forEach((s) => s.classList.remove('active'));
-    const loading = document.getElementById('screen-loading');
-    const results = document.getElementById('screen-results');
-    const sales = document.getElementById('screen-sales');
-    if (loading) loading.classList.remove('active');
-    if (results) results.classList.remove('active');
-    if (sales) sales.classList.remove('active');
+    const prenom = document.getElementById('prenom').value.trim();
 
-    currentStep = saved.step || 1;
-    history = Array.isArray(saved.history) ? saved.history : [];
+    // 🔧 Pour enregistrer réellement les inscriptions (Google Sheet, CRM, base de données...),
+    // ajoutez ici un appel fetch() vers votre backend, un webhook (Make/Zapier),
+    // un Google Apps Script, ou un service comme Formspree. Exemple :
+    //
+    // fetch('https://votre-backend.com/api/leads', {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/json' },
+    //   body: JSON.stringify({
+    //     nom: document.getElementById('nom').value,
+    //     prenom: prenom,
+    //     email: document.getElementById('email').value,
+    //     metier: document.getElementById('metier').value,
+    //     pays: document.getElementById('pays').value
+    //   })
+    // });
 
-    if (saved.mode === 'screen') {
-      currentMode = 'screen';
-      showScreen(currentStep);
-    } else if (saved.mode === 'loading') {
-      currentMode = 'loading';
-      document.getElementById('screen-loading').classList.add('active');
-      document.getElementById('stepCounter').style.visibility = 'hidden';
-      document.getElementById('progress-bar').style.width = '90%';
-    } else if (saved.mode === 'results') {
-      currentMode = 'results';
-      document.getElementById('screen-results').classList.add('active');
-      document.getElementById('progress-bar').style.width = '95%';
-    } else if (saved.mode === 'sales') {
-      currentMode = 'sales';
-      document.getElementById('screen-sales').classList.add('active');
-      document.getElementById('progress-bar').style.width = '100%';
-    } else {
-      currentMode = 'screen';
-      showScreen(1);
-      document.getElementById('stepCounter').style.visibility = 'hidden';
-    }
-  }
+    document.getElementById('success-title').textContent = prenom ? 'Merci, ' + prenom + ' !' : 'Dossier enregistré';
+    document.getElementById('form-view').style.display = 'none';
+    document.getElementById('success-view').style.display = 'block';
+  });
 
-  // Restore flow on page load (or reload)
-  window.addEventListener('load', restoreFlowState);
-
-  // ── NAVIGATION ──
-  function goTo(step) {
-    const from = document.getElementById('screen-' + currentStep);
-    if (from) {
-      from.style.animation = 'fadeOut .25s ease forwards';
-      setTimeout(() => {
-        from.style.animation = '';
-        from.classList.remove('active');
-        history.push(currentStep);
-        currentStep = step;
-        showScreen(step);
-        saveFlowState({ mode: 'screen', step: currentStep, history });
-      }, 220);
-    } else {
-      history.push(currentStep);
-      currentStep = step;
-      showScreen(step);
-      saveFlowState({ mode: 'screen', step: currentStep, history });
-    }
-  }
-
-  function showScreen(step) {
-    const el = document.getElementById('screen-' + step);
-    if (!el) return;
-    currentMode = 'screen';
-    el.classList.add('active');
-    updateHeader(step);
-    updateProgress(step);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
-  function goBack() {
-    if (currentMode === 'sales') {
-      document.getElementById('screen-sales').classList.remove('active');
-      document.getElementById('screen-results').classList.add('active');
-      document.getElementById('progress-bar').style.width = '95%';
-      currentMode = 'results';
-      saveFlowState({ mode: 'results', step: currentStep, history });
-      return;
-    }
-    if (currentMode === 'results') {
-      document.getElementById('screen-results').classList.remove('active');
-      currentStep = 8;
-      showScreen(8);
-      saveFlowState({ mode: 'screen', step: currentStep, history });
-      return;
-    }
-    if (currentMode === 'loading') {
-      document.getElementById('screen-loading').classList.remove('active');
-      currentStep = 8;
-      showScreen(8);
-      saveFlowState({ mode: 'screen', step: currentStep, history });
-      return;
-    }
-    if (history.length === 0) return;
-    const prev = history.pop();
-    const from = document.getElementById('screen-' + currentStep);
-    if (from) { from.classList.remove('active'); }
-    currentStep = prev;
-    showScreen(prev);
-    saveFlowState({ mode: 'screen', step: currentStep, history });
-  }
-
-  function updateHeader(step) {
-    const backBtn = document.getElementById('backBtn');
-    const counter = document.getElementById('stepCounter');
-    const stepNum = document.getElementById('stepNum');
-    backBtn.style.visibility = 'visible';
-    counter.style.visibility = 'visible';
-    stepNum.textContent = step;
-  }
-
-  function updateProgress(step) {
-    const pct = ((step - 1) / TOTAL_STEPS) * 100;
-    document.getElementById('progress-bar').style.width = pct + '%';
-  }
-
-  // ── EMAIL CAPTURE → LOADING ──
-  function startLoading() {
-    /*const email = document.getElementById('emailInput').value;
-    if (!email || !email.includes('@')) {
-      document.getElementById('emailInput').style.borderColor = 'var(--accent)';
-      document.getElementById('emailInput').focus();
-      return;
-    }*/
-
-    // Hide current screen
-    const screen8 = document.getElementById('screen-8');
-    screen8.classList.remove('active');
-    document.getElementById('stepCounter').style.visibility = 'hidden';
-    document.getElementById('progress-bar').style.width = '90%';
-
-    // Show loader
-    const loader = document.getElementById('screen-loading');
-    loader.classList.add('active');
-
-    currentMode = 'loading';
-    saveFlowState({ mode: 'loading', step: currentStep, history });
-    animateLoader();
-  }
-
-  function animateLoader() {
-    const ring = document.getElementById('loaderRing');
-    const pctEl = document.getElementById('loaderPct');
-    const circumference = 314;
-    let pct = 0;
-
-    const phases = [
-      { target: 30, duration: 1200, check: 'check1' },
-      { target: 60, duration: 1000, check: 'check2' },
-      { target: 85, duration: 900,  check: 'check3' },
-      { target: 100, duration: 700, check: 'check4' }
-    ];
-
-    let phaseIndex = 0;
-    let lastTime = null;
-
-    function step(timestamp) {
-      if (!lastTime) lastTime = timestamp;
-      const phase = phases[phaseIndex];
-      const elapsed = timestamp - lastTime;
-      const progress = Math.min(elapsed / phase.duration, 1);
-      const prevTarget = phaseIndex > 0 ? phases[phaseIndex - 1].target : 0;
-      pct = prevTarget + (phase.target - prevTarget) * easeInOut(progress);
-
-      const offset = circumference - (pct / 100) * circumference;
-      ring.style.strokeDashoffset = offset;
-      pctEl.textContent = Math.round(pct) + '%';
-
-      if (progress >= 1) {
-        // Check item done
-        const li = document.getElementById(phase.check);
-        const box = document.getElementById(phase.check.replace('check', 'box'));
-        li.classList.add('done');
-        box.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0a0a0f" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>';
-        phaseIndex++;
-        lastTime = timestamp;
-        if (phaseIndex < phases.length) {
-          requestAnimationFrame(step);
-        } else {
-          // Done — show results
-          setTimeout(() => {
-            document.getElementById('screen-loading').classList.remove('active');
-            showResults();
-          }, 700);
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.section, .section-tight');
+  if('IntersectionObserver' in window){
+    const io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+          io.unobserve(entry.target);
         }
-      } else {
-        requestAnimationFrame(step);
-      }
-    }
-
-    requestAnimationFrame(step);
+      });
+    }, {threshold:0.1});
+    revealEls.forEach(function(el){
+      el.style.opacity = 0;
+      el.style.transform = 'translateY(24px)';
+      el.style.transition = 'opacity .6s ease, transform .6s ease';
+      io.observe(el);
+    });
   }
-
-  function easeInOut(t) {
-    return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
-  }
-
-  // ── RESULTS ──
-  function showResults() {
-    const res = document.getElementById('screen-results');
-    res.classList.add('active');
-    document.getElementById('progress-bar').style.width = '95%';
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-
-    currentMode = 'results';
-    saveFlowState({ mode: 'results', step: currentStep, history });
-
-    // Animate scores
-    setTimeout(() => {
-      animateScore('score1', 'bar1', 24, 2000);
-      animateScore('score2', 'bar2', 78, 2200);
-    }, 300);
-  }
-
-  function animateScore(scoreId, barId, target, duration) {
-    let start = null;
-    const scoreEl = document.getElementById(scoreId);
-    const barEl = document.getElementById(barId);
-
-    function step(ts) {
-      if (!start) start = ts;
-      const p = Math.min((ts - start) / duration, 1);
-      const val = Math.round(easeInOut(p) * target);
-      scoreEl.textContent = val;
-      barEl.style.width = val + '%';
-      if (p < 1) requestAnimationFrame(step);
-    }
-    requestAnimationFrame(step);
-  }
-
-  // ── SALES PAGE ──
-  function showSales() {
-    document.getElementById('screen-results').classList.remove('active');
-    const sales = document.getElementById('screen-sales');
-    sales.classList.add('active');
-    document.getElementById('progress-bar').style.width = '100%';
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    currentMode = 'sales';
-    saveFlowState({ mode: 'sales', step: currentStep, history });
-    startCountdown();
-  }
-
-  // ── COUNTDOWN ──
-  function startCountdown() {
-    let total = 15 * 60; // 15 minutes
-    const el = document.getElementById('countdown');
-
-    function tick() {
-      const m = Math.floor(total / 60);
-      const s = total % 60;
-      el.textContent = String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
-      if (total > 0) { total--; setTimeout(tick, 1000); }
-      else { el.textContent = '00:00'; el.style.color = 'var(--muted)'; }
-    }
-    tick();
-  }
-
-  // ── PURCHASE ──
-function handlePurchase() {
-  window.location.href = 'https://tbk-digital.mymaketou.store/products/fini-les-regles-douloureuses-/checkout';
-}
 </script>
+
 </body>
 </html>
